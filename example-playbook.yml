@@ -1,0 +1,8 @@
+- name: Create a file on the local machine
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create a file
+      file:
+        path: /tmp/example_file.txt
+        state: touch
